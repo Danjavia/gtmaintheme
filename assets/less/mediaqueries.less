@@ -1,0 +1,336 @@
+@media (max-width: 32em) {
+	// Main header
+	.main-header {
+		
+		// Use in post.hbs
+		&.post-header {
+
+			// Site Description
+			.center-content {
+
+				height: 30px;
+
+				.page-description {
+					color: @light;
+					font-family: @Poiret;
+					font-size: 2em;
+				}
+
+				.post-type {
+					color: @grape-light;
+					font-family: @Poiret;
+					font-size: 2em;
+					margin-top: 50px;
+				}
+			}
+
+			.sharing {
+				display: none;
+			}
+		}
+
+		// Site Description
+		.center-content {
+			width: 90%;
+			right: 0;
+			
+			.page-description {
+				color: @light;
+				font-family: @Poiret;
+				font-size: 2em;
+				line-height: 1em;
+			}
+
+			.post-type {
+				color: #ed5565;
+				font-family: 'Poiret One', cursive;
+				font-size: 2em;
+				margin-top: 30px;
+			}
+		}
+
+		// Sharing area
+		.sharing {
+			.adjust( absolute, none, 0, 10%, 0, 100%, 100px, none );
+
+			a {
+				color: @light;
+				font-size: 1.3em;
+				font-family: @OpenSans;
+				margin: 10px;
+				&:hover{ color: @grape-light; text-decoration: none; }
+			}
+		}
+	}
+
+	// Main navigation
+	nav {
+
+		// Floated menu
+		.menu {
+			.adjust( absolute, none, 0, none, none, auto, auto, none );
+			.sizing( border-box );
+			padding: 10px;
+			
+			> li { 
+				display: none; 
+				font-size: 1.5em; 
+				margin: 0 10px;
+				font-family: @Poiret;
+			}
+
+			>.uk-button-dropdown {
+				.inline();
+				margin-top: -5px;
+			}
+		}
+	}
+
+	// Main content
+	.main-content {
+
+		.gt-main-section {
+			padding: 20px 0;
+		}
+
+		.wrapper-1240 {
+			padding: 5px;
+		}
+
+		.gt-feats-item {
+			text-align: center;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+
+			.icon {
+				font-size: 4em;
+				color: @grape-light;
+			}
+
+			h2 {
+				font-family: @Poiret;
+				font-weight: 700;
+			}
+
+			p {
+				font-family: @Roboto;
+			}
+		}
+	}
+
+	// Feat gt theme
+	.ft-gt .ft-gt-theme .post-feat {
+		height: 200px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+		}
+
+		h3 {
+			.adjust( absolute, 70px, 0, none, 0, 100%, 50px, none );
+			font-size: 1.5em;
+		}
+
+		h2 {
+			.adjust( absolute, 60px, 0, none, 0, 100%, 50px, none );
+			font-size: 1.8em;
+		}
+	}
+
+	// Latest themes
+	.lt-gt {
+		
+		.uk-grid {
+			margin-left: -10px;
+
+			> * {
+				padding-left: 10px;
+			}			
+		}
+	}
+
+	.lt-gt .lt-post-item {
+
+		article {
+			padding: 5px;
+
+			.image-section {
+				width: 100%;
+				height: 60px;
+
+				img {
+					width: 100%;
+					height: 60px;
+					object-fit: cover;
+					overflow: hidden;
+				}
+			}
+
+			.lt-content .description {
+				display: none;
+				font-family: @Roboto;
+				font-size: 0.8em;
+				line-height: 1em;
+				margin-top: -10px;
+				margin-bottom: 0;
+			}
+
+			.lt-content .type {
+				position: relative;
+				min-height: 10px;
+				font-size: 0.8em;
+
+				a {
+					color: @grape-light;
+					position: absolute;
+					right: 0;
+
+					&:hover {
+						color: @grape-dark;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.lt-content {
+				position: relative;
+				.uk-button-dropdown {
+					position: absolute;
+					top: 0;
+					right: 0;
+					.index( 2 );
+
+					.uk-button {
+						background: none;
+						border: none;
+						padding: 0px 0px 0px 15px;
+						font-size: 1em;
+						margin-top: -10px;
+					}
+				}
+			}
+		}
+
+		h2 {
+			font-family: @Roboto;
+			font-size: 0.8em;
+			line-height: 1em;
+			margin: 0;
+			margin-top: 5px;
+			max-width: 65%;
+			max-height: 22px;
+			overflow: hidden;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			a {
+				color: @grape-light;
+				&:hover,
+				&:active {
+					color: @grape-dark;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	// Post.hbs
+	.the-post {
+
+		&.gt-main-section {
+
+			background: #e5e9ec;
+		}
+
+		.wrapper-1240 {
+			position: relative;
+		}
+
+		.post {
+			width: 100%;
+			.inline();
+			font-family: @Roboto;
+			border: 1px solid @medium-light;
+			.radius( 3px );
+			background: @light;
+			.sizing( border-box );
+			padding: 10px 20px;
+			color: @dark;
+
+			h2 {
+				font-family: @Dosis;
+				font-weight: bold;
+			}
+
+			a {
+				color: @grape-light;
+				&:hover,
+				&:active {
+					color: @grape-dark;
+					text-decoration: none;
+				}
+			}
+
+			.post-footer {
+				margin-top: 50px;
+			}
+		}
+
+		// Author data sidebar
+		.sidebar {
+			width: 100%;
+			position: relative;
+			.inline();
+			right: 0;
+			margin-top: 10px;
+		}
+	}
+
+	// Footer
+	.site-footer {
+		text-align: center;
+		color: @light;
+		.sizing( border-box );
+		padding: 20px;
+		font-family: @Poiret;
+		font-size: 1.3em;
+		background: @dark;
+
+		&.post {
+			background: @dark;
+		}
+
+		a {
+			color: @light;
+
+			&:hover,
+			&:active {
+				color: @grape-light;
+				text-decoration: none;
+			}
+		}
+
+		.sharing-footer {
+			margin-top: 5px;
+
+			a {
+				margin: 5px;
+			}
+		}
+	}
+
+	// Modals
+	#modal-plans .plans-table {
+		.monthly,
+		.yearly {
+			display: block;
+			width: 100%;
+		}
+
+		.yearly { margin-top: 40px; }
+	}
+}

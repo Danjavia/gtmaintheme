@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+{{!-- Navigation --}}
+{{> "navigation-purchase"}} 
+
+{{!-- The content --}}
+<main class="main-content preview-content">
+    {{!-- GT Features --}}
+    <div class="uk-width-1-1 gt-main-section the-preview">
+        <iframe src="" width="100%" height="700" frameborder="0" class="preview"></iframe>
+    </div>
+
+    {{!-- Footer --}}
+    {{> "footer"}} 
+</main>
+
+{{/post}}

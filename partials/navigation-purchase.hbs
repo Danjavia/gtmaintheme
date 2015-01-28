@@ -1,0 +1,27 @@
+{{!-- Main navigation --}}
+<nav class="main-nav">
+    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+    <h1 class="page-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    <ul class="menu">
+        <li class="subscribe-button"><a href="" class="preview-purchase">Purchase</a></li>
+        <li class="subscribe-button"><a href="" data-modal="#modal-plans">Pricing</a></li>
+        <li class="subscribe-button"><a href="" data-modal="#modal-user-login">Login</a></li>
+
+        <!-- This is the container enabling the JavaScript -->
+        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+
+            <!-- This is the button toggling the dropdown -->
+            <button class="uk-button"><i class="uk-icon-reorder"></i></button>
+
+            <!-- This is the dropdown -->
+            <div class="uk-dropdown uk-dropdown-small">
+                <ul class="uk-nav uk-nav-dropdown">
+                    <li><a href="" class="preview-purchase">Purchase</a></li>
+                    <li><a href="" data-modal="#modal-plans">Pricing</a></li>
+                    <li><a href="" data-modal="#modal-user-login">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </ul>
+</nav>

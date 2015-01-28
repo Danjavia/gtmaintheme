@@ -1,0 +1,223 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="main-header {{#if @blog.cover}}cover{{/if}}">
+    {{#if @blog.cover}}
+        <img data-aload="{{@blog.cover}}" alt="">
+        <div class="blurred"></div>
+    {{/if}}
+
+    {{!-- Main cover --}}
+    <div class="center-content">
+        <h2 class="page-description">Amazing themes for Ghost bloggers.{{!-- {{@blog.description}} --}}</h2>
+    </div>
+
+    {{!-- Sharing --}}
+    <section class="sharing">
+        <h2>Share us with your friends</h2>
+        <a class="ghost-btn" href="https://twitter.com/share?text=I find out a great site for downloading {{@blog.title}}&amp;url={{@blog.url}}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="">Twitter</span>
+        </a>
+        <a class="ghost-btn" href="https://www.facebook.com/sharer/sharer.php?u={{@blog.url}}"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="">Facebook</span>
+        </a>
+        <a class="ghost-btn" href="https://plus.google.com/share?url={{@blog.url}}"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+            <span class="">Google+</span>
+        </a>
+    </section>
+</header>
+
+{{!-- Main navigation --}}
+<nav class="main-nav">
+    {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+    <h1 class="page-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    <ul class="menu">
+        <li class="subscribe-button"><a href="/tag/free/">Free</a></li>
+        <li class="subscribe-button"><a href="/tag/premium/">Premium</a></li>
+        <li class="subscribe-button"><a href="" data-modal="#modal-plans">Pricing</a></li>
+        <li class="subscribe-button"><a href="" data-modal="#modal-user-login">Login</a></li>
+
+
+        <!-- This is the container enabling the JavaScript -->
+        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+
+            <!-- This is the button toggling the dropdown -->
+            <button class="uk-button"><i class="uk-icon-reorder"></i></button>
+
+            <!-- This is the dropdown -->
+            <div class="uk-dropdown uk-dropdown-small">
+                <ul class="uk-nav uk-nav-dropdown">
+                    <li><a href="/tag/free/">Free</a></li>
+                    <li><a href="/tag/premium/">Premium</a></li>
+                    <li><a href="" data-modal="#modal-plans">Pricing</a></li>
+                    <li><a href="" data-modal="#modal-user-login">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </ul>
+</nav>
+
+{{!-- The content --}}
+<section class="main-content">
+
+    {{!-- Site Intro --}}
+    <div class="uk-width-1-1 gt-main-section intro">
+        <div class="wrapper-1240">
+            <div class="site-intro">
+                <h2>Beautiful <a href="https://twitter.com/hashtag/ghostblog">#Ghost</a> themes for professional bloggers, Ready to use in all your personal or commercial projects.</h2>
+            </div>
+        </div>
+    </div>
+
+    {{!-- GT Features --}}
+    <div class="uk-width-1-1 gt-main-section features">
+        <div class="wrapper-1240">
+            <div class="gt-feats uk-grid">
+                <div class="uk-width-1-3 gt-feats-item" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay: 400}">
+                    <div class="centered icon">
+                        <i class="uk-icon-sliders"></i>
+                    </div>
+                    <h2>Customizable</h2>
+                    <p>
+                        Apply your own style to your themes, select between 8+ colors, mutiple fonts and differents layouts.
+                    </p>
+                </div>
+                <div class="uk-width-1-3 gt-feats-item" data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay: 400}">
+                    <div class="centered icon">
+                        <i class="uk-icon-mobile"></i>
+                    </div>
+                    <h2>Fully Responsive</h2>
+                    <p>
+                        Your content always available in any device around the world, from mobile to smart tv. 
+                    </p>
+
+                </div>
+                <div class="uk-width-1-3 gt-feats-item" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay: 400}">
+                    <div class="centered icon">
+                        <i class="uk-icon-file"></i>
+                    </div>
+                    <h2>Thought bloggers</h2>
+                    <p>
+                        Share, distribute and leave to grow your ideas with the world writing in clean and focused themes.
+                    </p>
+                </div>
+            </div>
+        </div> {{!-- end 1240 --}}
+    </div>
+
+    {{! The main content area on the homepage }}
+    
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{!-- {{> "loop"}} --}}
+    {{#posts}}
+        {{#if featured}}
+
+            <div class="uk-width-1-1 gt-main-section ft-gt">
+                <div class="wrapper-1240">
+                    <main id="ft-gt-theme" class="content gt-section ft-gt-theme" role="main">
+                
+                        <a href="{{ url }}">
+                            <div class="post-feat" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true}">
+                                <div class="blurred"></div>
+                                {{#if image}}
+                                    <img src="{{ image }}" class="ft-gt-img" alt="">
+                                {{/if}}
+
+                                <h3>Featured Theme of the Week</h3>
+                                <h2><i class="uk-icon-star"></i> {{ title }}</h2>
+
+                                <!-- This is the container enabling the JavaScript -->
+                                <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+
+                                    <!-- This is the button toggling the dropdown -->
+                                    <button class="uk-button"><i class="uk-icon-reorder"></i></button>
+
+                                    <!-- This is the dropdown -->
+                                    <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
+                                        <ul class="uk-nav uk-nav-dropdown">
+                                            <li><a href="">Preview</a></li>
+                                            <li><a href="">Download</a></li>
+                                            <li><a href="">Purchase</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>   
+
+                    </main>
+                </div>
+            </div>
+        {{/if}}
+    {{/posts}} 
+
+    {{!-- Latest themes or apps here --}}
+    <div class="uk-width-1-1 gt-main-section lt-gt">
+        <div class="wrapper-1240">
+            <h2><i class="uk-icon-rocket"></i> Latest themes</h2>
+            <section class="latest-gt-themes uk-grid">
+
+                {{#posts}}
+                    {{#unless featured}}
+                        <section class="uk-width-1-3 lt-post-item">
+                            <article class="article" data-uk-scrollspy="{cls:'uk-animation-scale-up', repeat: true}">
+                                
+                                <section class="image-section">
+                                    {{#if image}}
+                                        <a href="{{ url }}"><img src="{{ image }}" alt=""></a> 
+                                    {{/if}}
+                                </section>
+
+                                <div class="lt-content">
+                                    <h2><a href="{{ url }}">{{ title }}</a></h2>
+                                    <p class="description">
+                                        {{excerpt words="15"}}
+                                    </p>
+
+                                    {{!-- Set type of theme --}}
+                                    <aside class="type">
+                                        {{#has tag="free"}}<strong><a href="{{ @blog.url }}/tag/free/">Free</a></strong>{{/has}}
+                                        {{#has tag="premium"}}<strong><a href="{{ @blog.url }}/tag/premium/">Premium</a></strong>{{/has}}
+                                    </aside>
+
+                                    <!-- This is the container enabling the JavaScript -->
+                                    <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+
+                                        <!-- This is the button toggling the dropdown -->
+                                        <button class="uk-button"><i class="uk-icon-ellipsis-v"></i></button>
+
+                                        <!-- This is the dropdown -->
+                                        <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
+                                            <ul class="uk-nav uk-nav-dropdown">
+                                                <li><a href="">Preview</a></li>
+                                                <li><a href="">Download</a></li>
+                                                <li><a href="">Purchase</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </article>
+
+                        </section>
+                    {{/unless}}
+                {{/posts}}
+
+            </section>
+        </div>
+    </div>
+
+    {{!-- Footer --}}
+    {{> "footer"}} 
+</section>
+
+
+
+

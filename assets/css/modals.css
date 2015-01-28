@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans|Roboto );
+.text-center {
+  text-align: center;
+}
+.no-border {
+  border-radius: 0!important;
+}
+.block {
+  display: block;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+body a {
+  color: #fefefe;
+  text-decoration: none;
+}
+body a:visited {
+  color: #fefefe;
+}
+body a:hover {
+  color: #fefefe;
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body ul li {
+  display: block;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px 5px;
+}
+body ul li .menu-icon {
+  font-size: 40px;
+  display: block;
+  color: #fefefe;
+}
+.overlay.login-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #fefefe;
+}
+.overlay.login-wrapper .login-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 320px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px;
+}
+.overlay.login-wrapper .login-form a {
+  color: #fefefe;
+  text-decoration: none;
+}
+.overlay.login-wrapper .login-form a:hover {
+  color: #fefefe;
+}
+.overlay.login-wrapper .login-form a.google-plus {
+  background: #d34836;
+}
+.overlay.login-wrapper .login-form a.github {
+  background: #010101;
+}
+.overlay.login-wrapper .login-form a.twitter {
+  background: #55acee;
+}
+.overlay.login-wrapper .login-form a.sign {
+  color: #8a8a8a;
+}
+.overlay.login-wrapper .login-form .user-logo img {
+  border-radius: 50%;
+}
+.overlay.login-wrapper .login-form .input-form {
+  height: 40px;
+}
+.overlay.login-wrapper .login-form .form-data {
+  margin-top: 20px;
+}
+.overlay.login-wrapper .login-form .or,
+.overlay.login-wrapper .login-form .social-login,
+.overlay.login-wrapper .login-form .terms {
+  margin-top: 10px;
+}

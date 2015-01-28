@@ -1,0 +1,118 @@
+.center( @pos, @width, @height, @bgColor : #fefefe ) {
+	position: @pos;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: @width;
+	height: @height;
+	background: @bgColor;
+}
+
+.adjust( @pos, @top: 0, @right: 0, @bottom: 0, @left: 0 , @width, @height, @bgColor : #fefefe ) {
+	position: @pos;
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+	margin: auto;
+	width: @width;
+	height: @height;
+	background: @bgColor;
+}
+
+.sizing( @sizing ) {
+	-webkit-box-sizing: @sizing; /* Safari/Chrome, other WebKit */
+  	-moz-box-sizing: @sizing;    /* Firefox, other Gecko */
+  	box-sizing: @sizing;         /* Opera/IE 8+ */
+}
+
+.inline() {
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+.text-center {
+	text-align: center;
+}
+
+.no-border {
+	border-radius: 0!important;
+}
+
+.block {
+	display: block;
+}
+
+.radius( @rad ) {
+	border-radius: @rad;
+}
+
+.position( @pos ) {
+	position: @pos;
+}
+
+.index( @index ) {
+	z-index: @index;
+}
+
+.shadow( @shadow ) {
+	box-shadow: @shadow;
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	-ms-box-shadow: @shadow;
+	-o-box-shadow: @shadow;
+}
+
+.transition ( @transition ) {
+	-webkit-transition: @transition;
+   	-moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.blur ( @blur ) {
+	-webkit-filter: blur( @blur );
+	-ms-filter: blur( @blur );
+	filter: blur( @blur );
+}
+
+.object-fit ( @fit: cover, @width, @height, @mwidth: 100% ) {
+    max-width: @mwidth;
+    width: @width;
+    height: @height;
+    object-fit: @fit;
+}
+
+// Buttons
+.ghost-btn {
+	border-radius: 3px;
+	border: 1px solid @light;
+	padding: 0 10px;
+	text-transform: uppercase;
+
+	&:hover,
+	&:active {
+		border-color: @grape-light;
+		text-decoration: none;
+	}
+
+	&.ghost-btn-large {
+		padding: 10px 20px;
+	}
+
+	&.ghost-btn-green {
+		color: @grass-dark;
+		border: 1px solid @grass-dark;
+
+		&:hover,
+		&:active {
+			color: @grass-light;
+			border: 1px solid @grass-light;
+		}
+	}
+}

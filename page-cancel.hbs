@@ -1,0 +1,58 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+{{!-- Navigation --}}
+{{> "navigation"}} 
+
+{{!-- The content --}}
+<main class="main-content cancel-content">
+    {{!-- GT Features --}}
+    <div class="uk-width-1-1 gt-main-section the-post">
+        <div class="wrapper-1240">
+            <article class="{{post_class}}">
+
+                {{!-- <header class="post-header">
+                    <h1 class="post-title">{{title}}</h1>
+                    <section class="post-meta">
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                    </section>
+                </header> --}}
+
+                <section class="post-content">
+                    {{content}}
+                </section>
+
+                <footer class="post-footer">
+                    <section class="comments">
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'ghost4themes'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            
+                    </section>
+
+                </footer>
+
+            </article>
+        </div>
+    </div>
+
+    {{!-- Footer --}}
+    {{> "footer"}} 
+</main>
+
+{{/post}}

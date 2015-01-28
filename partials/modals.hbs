@@ -1,0 +1,91 @@
+{{!-- Plans --}}
+<div id="modal-plans" class="modal">
+	<div class="modal-dialog">
+		<a class="modal-close uk-close"></a>
+		<div class="modal-header">
+			Become premium
+		</div>
+		<div class="modal-content">
+			<span class="plan-description">Get all themes and weekly updates for a lifetime... and contact support 24/7 of course.</span>
+			<div class="plans-table">
+				<div class="monthly">
+					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7APH7S3PSB34L" class="ghost-btn ghost-btn-large ghost-btn-green gt-pay-btn" data-modal="#modal-user-register">$25 USD / Month</a>
+				</div>
+				<div class="yearly">
+					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=48QAFMVN7536W" class="ghost-btn ghost-btn-large ghost-btn-green gt-pay-btn" data-modal="#modal-user-register">$250 USD / Year</a>					
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="{{ @blog.url }}">{{ @blog.title }}</a> &copy; {{ date format="YYYY" }}
+		</div>
+	</div>
+</div>
+
+
+{{!-- Login Signup --}}
+<div id="modal-user-login" class="modal">
+	<div class="modal-dialog">
+		<a class="modal-close uk-close"></a>
+		<div class="modal-header">
+			User area
+		</div>
+		<div class="modal-content">
+			<span class="description">Access to premium member area.</span>
+			<div class="login">
+				<input type="text" class="gt-username" placeholder="your@domain.com">
+				<input type="password" class="gt-password" placeholder="Password">
+				<a href="" class="ghost-btn ghost-btn-large ghost-btn-green access">Login</a>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="" data-modal="#modal-plans">Create new account</a> or
+			<a href="{{ @blog.url }}">Recovery password</a>
+		</div>
+	</div>
+</div>
+
+
+{{!-- Register Signup --}}
+<div id="modal-user-register" class="modal">
+	<div class="modal-dialog">
+		<a class="modal-close uk-close"></a>
+		<div class="modal-header">
+			User area
+		</div>
+		<div class="modal-content">
+			<span class="description">Access to premium member area.</span>
+			<div class="signup">
+				<input type="email" class="gt-email" placeholder="your@domain.com">
+				<a href="" class="ghost-btn ghost-btn-large ghost-btn-green register">Proceed</a>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="" data-modal="#modal-user-login">login</a> or
+			<a href="{{ @blog.url }}">Recovery password</a>
+		</div>
+	</div>
+</div>
+
+
+{{!-- Register Signup finished --}}
+<div id="modal-user-registered" class="modal">
+	<div class="modal-dialog">
+		<a class="modal-close uk-close"></a>
+		<div class="modal-header">
+			Thanks for suscribe!
+		</div>
+		<div class="modal-content">
+			<span class="description">Welcome to Ghost Themes. Please set your password for finishing registration.</span>
+			<div class="signup">
+				<input type="email" class="gt-email-suscribed" placeholder="your@domain.com">
+				<input type="password" class="gt-password-suscribed" placeholder="Password">
+				<a href="" class="ghost-btn ghost-btn-large ghost-btn-green update">Finish</a>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="" data-modal="#modal-user-login">login</a> or
+			<a href="{{ @blog.url }}">Recovery password</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,218 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans|Roboto );
+.text-center {
+  text-align: center;
+}
+.no-border {
+  border-radius: 0!important;
+}
+.block {
+  display: block;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+body a {
+  color: #fefefe;
+  text-decoration: none;
+}
+body a:visited {
+  color: #fefefe;
+}
+body a:hover {
+  color: #fefefe;
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body ul li {
+  display: block;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px 5px;
+}
+body ul li .menu-icon {
+  font-size: 40px;
+  display: block;
+  color: #fefefe;
+}
+.dashboard .actions .app-off-canvas {
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+}
+.dashboard .actions .app-off-canvas:after {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+.dashboard .actions .user-panel {
+  margin: 0;
+  color: #fefefe;
+}
+.dashboard .actions .user-panel * {
+  color: #fefefe;
+}
+.dashboard .actions .user-panel .custom-header {
+  background: #1aaa91;
+}
+.dashboard .actions .user-panel .user-panel-data {
+  margin-top: 10px;
+}
+.dashboard .actions .user-panel .user-panel-data .avatar {
+  border-radius: 50%;
+  border: 5px solid #1aaa91;
+}
+.dashboard .actions .user-panel .user-panel-data .upd-data {
+  margin-top: 15px;
+}
+.dashboard .content {
+  width: calc(100% - 90px);
+  position: relative;
+}
+.dashboard .content .title-selection {
+  position: fixed;
+  width: calc(100% - 90px);
+  z-index: 2;
+}
+.dashboard .content .app-data {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  bottom: none;
+  left: 0;
+  margin: auto;
+  width: 960px;
+  height: calc(100% - 42px);
+  background: #fefefe;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px;
+}
+.dashboard .content .app-data ul .update-item > div {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  /* Fix for IE7 */
+  *display: inline;
+  /* Fix for IE7 */
+  padding: 10px;
+}
+.dashboard .content .app-data ul .update-item > div.type {
+  font-size: 40px;
+  width: 40px;
+}
+.dashboard .content .app-data ul .update-item > div.data-update {
+  width: 750px;
+}
+.dashboard .content .app-data ul .update-item > div.data-update .data-title {
+  margin: 0;
+}
+.dashboard .content .app-data ul .update-item > div.data-update p.normal {
+  margin: 0;
+}
+.dashboard .content .app-data ul .update-item > div.date {
+  position: absolute;
+  right: 0;
+}
+.dashboard .content .app-data.tasks-board .main-input {
+  width: 100%;
+  height: 45px;
+  font-size: 35px;
+  color: #555555;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px;
+  border: none;
+  outline: 2px solid #b3b3b3;
+}
+.dashboard .content .in-action {
+  background: #1aaa91;
+}
+.dashboard .content .in-action .title-action {
+  margin: 5px;
+  color: #fefefe;
+}
+.dashboard .menu {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  text-align: center;
+  z-index: 3;
+}
+.dashboard .menu.right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: none;
+  left: none;
+  margin: auto;
+  width: 90px;
+  height: 100%;
+  background: #1e1e20;
+}
+.dashboard .menu.left {
+  position: fixed;
+  top: 0;
+  right: none;
+  bottom: none;
+  left: 0;
+  margin: auto;
+  width: 90px;
+  height: 100%;
+  background: #1e1e20;
+}
+.dashboard .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dashboard .menu ul li {
+  display: block;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.dashboard .menu ul li .menu-icon {
+  font-size: 40px;
+  display: block;
+  color: #fefefe;
+}
+.dashboard .menu ul li:hover {
+  background: #1aaa91;
+}
+.dashboard .menu ul li.logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.dashboard .menu ul li.logout .menu-icon {
+  font-size: 30px;
+}

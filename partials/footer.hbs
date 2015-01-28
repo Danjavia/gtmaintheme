@@ -1,0 +1,23 @@
+<footer class="site-footer {{ post_class }}">
+    <section class="copyright"><a href="{{ @blog.url }}">{{ @blog.title }}</a> &copy; {{ date format="YYYY" }}</section>
+    <section class="sharing-footer">
+    	
+	    <a class="" href="https://twitter.com/share?text=I find out a great site for downloading {{@blog.title}}&amp;url={{@blog.url}}"
+	        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+	        <span class="uk-icon-twitter hidden"></span>
+	    </a>
+	    <a class="" href="https://www.facebook.com/sharer/sharer.php?u={{@blog.url}}"
+	        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+	        <span class="uk-icon-facebook hidden"></span>
+	    </a>
+	    <a class="" href="https://plus.google.com/share?url={{@blog.url}}"
+	       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	        <span class="uk-icon-google-plus hidden"></span>
+	    </a>
+    </section>
+    <a href="{{ @blog.url }}/contact">Contact</a> | <a href="{{ @blog.url }}/about">About</a> <br>
+    <span>Powered by <a href="http://ghost.org" target="_blank">Ghost</a></span>
+</footer>
+
+{{!-- Footer --}}
+{{> "modals"}} 

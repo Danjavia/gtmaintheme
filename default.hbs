@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description }}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{ asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{ asset "css/polyfill.object-fit.css" }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset "css/uikit.css" }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset "css/ghosty.css" }}" />
+    <link href='http://fonts.googleapis.com/css?family=Dosis|Lato|Poiret+One|Roboto+Condensed|Open+Sans+Condensed:300|Pacifico|sniglet' rel='stylesheet' type='text/css'>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ ghost_head }}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-58166128-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body class="{{ body_class }}">
+
+    {{! Everything else gets inserted here }}
+    {{{ body }}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ ghost_foot }}
+
+    {{! The main JavaScript file for Casper }}
+    <script>
+        function aload(a){"use strict";a=a||window.document.querySelectorAll("[data-aload]"),void 0===a.length&&(a=[a]);var b,c=0,d=a.length;for(c;d>c;c+=1)b=a[c],b["LINK"!==b.tagName?"src":"href"]=b.getAttribute("data-aload"),b.removeAttribute("data-aload");return a}
+    </script>
+    <script src="https://app.userapp.io/js/userapp.client.js"></script>
+    <script type="text/javascript" src="{{ asset "js/scripts-dist.js" }}"></script>
+</body>
+</html>
