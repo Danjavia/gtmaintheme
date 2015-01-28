@@ -243,6 +243,7 @@
 
 						delete localStorage.payLink
 	    				delete localStorage.refererMail;
+	    				
 
 	    				$( '.gt-email-suscribed' ).val( suscriberEmail );
 					}
