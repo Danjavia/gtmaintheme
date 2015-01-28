@@ -245,7 +245,7 @@
 	    				delete localStorage.refererMail;
 
 	    				$( '.gt-email-suscribed' ).val( suscriberEmail );
-	    				$( '.user-registered' ).click();
+	    				// $( '.user-registered' ).click();
 					}
 
 				    // Handle error/result
