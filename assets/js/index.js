@@ -236,7 +236,7 @@
 
 						delete localStorage.payLink
 	    				delete localStorage.refererMail;
-	    				window.location = '/';
+	    				// window.location = '/';
 					}
 
 					else {
