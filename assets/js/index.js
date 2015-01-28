@@ -236,7 +236,7 @@
 
 						delete localStorage.payLink
 	    				delete localStorage.refererMail;
-	    				// window.location = '/';
+	    				window.location = '/';
 					}
 
 					else {
@@ -245,7 +245,7 @@
 	    				delete localStorage.refererMail;
 
 	    				$( '.gt-email-suscribed' ).val( suscriberEmail );
-	    				$( '.user-registered' ).click();
+	    				// $( '.user-registered' ).click();
 					}
 
 				    // Handle error/result
