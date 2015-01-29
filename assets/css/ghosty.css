@@ -796,40 +796,51 @@ nav .menu > .uk-button-dropdown {
   /* Fix for IE7 */
 }
 #modal-user-login .modal-dialog,
-#modal-user-register .modal-dialog {
+#modal-user-register .modal-dialog,
+#modal-user-registered .modal-dialog {
   max-width: 500px;
 }
 #modal-user-login .modal-header,
 #modal-user-register .modal-header,
+#modal-user-registered .modal-header,
 #modal-user-login .modal-footer,
 #modal-user-register .modal-footer,
+#modal-user-registered .modal-footer,
 #modal-user-login .modal-content,
-#modal-user-register .modal-content {
+#modal-user-register .modal-content,
+#modal-user-registered .modal-content {
   text-align: center;
 }
 #modal-user-login .modal-footer a,
-#modal-user-register .modal-footer a {
+#modal-user-register .modal-footer a,
+#modal-user-registered .modal-footer a {
   color: #aab2bd;
 }
 #modal-user-login .modal-footer a:hover,
 #modal-user-register .modal-footer a:hover,
+#modal-user-registered .modal-footer a:hover,
 #modal-user-login .modal-footer a:active,
-#modal-user-register .modal-footer a:active {
+#modal-user-register .modal-footer a:active,
+#modal-user-registered .modal-footer a:active {
   color: #434a54;
   text-decoration: none;
 }
 #modal-user-login .modal-content .login,
 #modal-user-register .modal-content .login,
+#modal-user-registered .modal-content .login,
 #modal-user-login .modal-content .signup,
-#modal-user-register .modal-content .signup {
+#modal-user-register .modal-content .signup,
+#modal-user-registered .modal-content .signup {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 #modal-user-login .modal-content .login input,
 #modal-user-register .modal-content .login input,
+#modal-user-registered .modal-content .login input,
 #modal-user-login .modal-content .signup input,
-#modal-user-register .modal-content .signup input {
+#modal-user-register .modal-content .signup input,
+#modal-user-registered .modal-content .signup input {
   width: 100%;
   height: 40px;
   margin-bottom: 10px;
@@ -846,14 +857,27 @@ nav .menu > .uk-button-dropdown {
 }
 #modal-user-login .modal-content .login .access,
 #modal-user-register .modal-content .login .access,
+#modal-user-registered .modal-content .login .access,
 #modal-user-login .modal-content .signup .access,
-#modal-user-register .modal-content .signup .access {
+#modal-user-register .modal-content .signup .access,
+#modal-user-registered .modal-content .signup .access {
   display: block;
 }
 #modal-user-login .modal-content .login .register,
 #modal-user-register .modal-content .login .register,
+#modal-user-registered .modal-content .login .register,
 #modal-user-login .modal-content .signup .register,
-#modal-user-register .modal-content .signup .register {
+#modal-user-register .modal-content .signup .register,
+#modal-user-registered .modal-content .signup .register {
+  display: block;
+  margin-top: 0px;
+}
+#modal-user-login .modal-content .login .update,
+#modal-user-register .modal-content .login .update,
+#modal-user-registered .modal-content .login .update,
+#modal-user-login .modal-content .signup .update,
+#modal-user-register .modal-content .signup .update,
+#modal-user-registered .modal-content .signup .update {
   display: block;
   margin-top: 0px;
 }

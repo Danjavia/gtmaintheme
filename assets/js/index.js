@@ -21,7 +21,8 @@
 			    });
 
 			    // Confirm purchase suscription
-			    this.confirmSuscribe();
+			    if ( this.checkPage( 'start' ) )
+			    	this.confirmSuscribe();
 
 			    // Equalize items height
     			$( 'article.article' ).matchHeight();
@@ -236,20 +237,21 @@
 
 						delete localStorage.payLink
 	    				delete localStorage.refererMail;
-	    				// window.location = '/';
+	    				window.location = '/';
+	    				return;
 					}
 
-					else {
+					delete localStorage.payLink
+    				delete localStorage.refererMail;
+    				
+    				$( '.gt-email-suscribed' ).val( suscriberEmail );
 
-						delete localStorage.payLink
-	    				delete localStorage.refererMail;
-	    				
+    				setTimeout( function () {
 
-	    				$( '.gt-email-suscribed' ).val( suscriberEmail );
-					}
+    					$( '.user-registered' ).click();
 
-				    // Handle error/result
-				    console.log( error, result );
+    				}, 400 );
+    				
 				});
 
 			}
@@ -303,6 +305,14 @@
 				    // window.location.href = "login.html";
 				    console.log( 'not token' );
 				}
+			}
+
+			// Check the page
+		,	checkPage: function ( page ) {
+				var url = document.URL
+	    		,	parts = url.split( '/' );
+
+	    		return ( parts[ 3 ] == page ) ? true : false;
 			}
 
 	});

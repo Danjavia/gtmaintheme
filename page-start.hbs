@@ -8,7 +8,7 @@
 
 <header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        <a class="hidden user-registered" data-modal="#modal-user-registered" href="{{@blog.url}}"></a>
+        <a class="hidden user-registered" data-modal="#modal-user-registered"></a>
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
     </nav>
 </header>
@@ -27,6 +27,9 @@
         </section>
 
     </article>
+
+    {{!-- Footer --}}
+    {{> "footer"}} 
 
 </main>
 {{/post}}
