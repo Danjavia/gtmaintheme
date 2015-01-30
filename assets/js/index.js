@@ -227,7 +227,7 @@
 				    // },
 				    "subscription": {
 				        "price_list_id": "X6nbOGwzRPynOfYGdCCjpw",
-				        "plan_id": ( suscriptionType == 'ygt' ) ? "dHKDKEhyRqebu7nAncfaaQ" : "Qii5--CgT-WZe4NtS-i8bw",
+				        "plan_id": ( suscriptionType == 'e33f023eca35a4843e1a40d0527ba3e8' ) ? "dHKDKEhyRqebu7nAncfaaQ" : "Qii5--CgT-WZe4NtS-i8bw",
 				        "override": false
 				    }
 
