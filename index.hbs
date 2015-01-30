@@ -130,23 +130,6 @@
 
                                 <h3>Featured Theme of the Week</h3>
                                 <h2><i class="uk-icon-star"></i> {{ title }}</h2>
-
-                                <!-- This is the container enabling the JavaScript -->
-                                <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
-
-                                    <!-- This is the button toggling the dropdown -->
-                                    <button class="uk-button"><i class="uk-icon-reorder"></i></button>
-
-                                    <!-- This is the dropdown -->
-                                    <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
-                                        <ul class="uk-nav uk-nav-dropdown">
-                                            <li><a href="">Preview</a></li>
-                                            <li><a href="">Download</a></li>
-                                            <li><a href="">Purchase</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
                             </div>
                         </a>   
 
@@ -184,23 +167,7 @@
                                         {{#has tag="free"}}<strong><a href="{{ @blog.url }}/tag/free/">Free</a></strong>{{/has}}
                                         {{#has tag="premium"}}<strong><a href="{{ @blog.url }}/tag/premium/">Premium</a></strong>{{/has}}
                                     </aside>
-
-                                    <!-- This is the container enabling the JavaScript -->
-                                    <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
-
-                                        <!-- This is the button toggling the dropdown -->
-                                        <button class="uk-button"><i class="uk-icon-ellipsis-v"></i></button>
-
-                                        <!-- This is the dropdown -->
-                                        <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
-                                            <ul class="uk-nav uk-nav-dropdown">
-                                                <li><a href="">Preview</a></li>
-                                                <li><a href="">Download</a></li>
-                                                <li><a href="">Purchase</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
+                                    
                                 </div>
 
                                 <div class="clearfix"></div>

@@ -21,7 +21,7 @@
 			    });
 
 			    // Confirm purchase suscription
-			    if ( this.checkPage( 'start' ) )
+			    if ( this.checkPage( 'start' ) ) 
 			    	this.confirmSuscribe();
 
 			    // Equalize items height
