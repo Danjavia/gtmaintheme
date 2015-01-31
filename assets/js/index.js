@@ -274,11 +274,13 @@
 			//logout
 		,	logout: function ( e ) {
 
+				e.preventDefault();
+
 				UserApp.User.logout( function( error, result ) {
 					// Clear cookie, redirect to login page, etc.
 					Cookies.expire( 'ua_session_token' );
 
-					if ( typeof ( Cookie.get( 'ua_session_token' ) ) == 'undefined' )
+					if ( typeof ( Cookies.get( 'ua_session_token' ) ) == 'undefined' )
 						console.log( 'logged out' );
 				});
 			}
