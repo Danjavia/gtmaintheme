@@ -6,13 +6,16 @@
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
 
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        <a class="hidden user-registered" data-modal="#modal-user-registered"></a>
-    </nav>
-</header>
+<nav class="profile-options-wrapper">
+	<ul>
+		<li><a href=""><i class="uk-icon-blog"></i></a></li>
+		<li><a href=""><i class="uk-icon-blog"></i></a></li>
+		<li><a href=""><i class="uk-icon-blog"></i></a></li>
+		<li><a href=""><i class="uk-icon-blog"></i></a></li>
+	</ul>
+</nav>
 
-<main class="content" role="main">
+<main class="profile-content" role="main">
 
     <article class="{{post_class}}">
     {{! Everything inside the #post tags pulls data from the post }}
