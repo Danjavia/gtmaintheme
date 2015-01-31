@@ -65,6 +65,7 @@
 	            ,	'click .logout': 'logout'
 	            ,	'click .register': 'register'
 	            ,	'click .gt-pay-btn': 'setPayment'
+	            , 	'click .update': 'createUser'
 	        }
 
 	        // Clean all params
@@ -215,9 +216,33 @@
 				,	suscriberEmail = localStorage.refererMail
 				,	temporalPassword = md5( suscriberEmail );
 
+				$( '.gt-email-suscribed' ).val( suscriberEmail );
+
+				setTimeout( function () {
+
+					$( '.user-registered' ).click();
+
+					delete localStorage.payLink
+    				delete localStorage.refererMail;
+
+				}, 400 );
+
+			}
+
+			// Register a new user
+		,	createUser: function ( e ) {
+				
+				e.preventDefault();
+
+				var target = e.currentTarget
+				,	email = $( '.gt-email-suscribed' ).val()
+				,	password = $( '.gt-password-suscribed' ).val()
+				,	temporalPassword = md5( email )
+				,	suscriptionType = this.getURLParameter( 'type' );
+
 				UserApp.User.save({
-				    "email": suscriberEmail,
-				    "login": suscriberEmail,
+				    "email": email,
+				    "login": email,
 				    "password": temporalPassword,
 				    // "properties": {
 				    //     "age": {
@@ -235,27 +260,17 @@
 
 					if ( error ) {
 
-						delete localStorage.payLink
-	    				delete localStorage.refererMail;
 	    				window.location = '/';
 	    				return;
+					} else {
+
+						window.location = '/profile';	
 					}
 
-					delete localStorage.payLink
-    				delete localStorage.refererMail;
-    				
-    				$( '.gt-email-suscribed' ).val( suscriberEmail );
-
-    				setTimeout( function () {
-
-    					$( '.user-registered' ).click();
-
-    				}, 400 );
-    				
 				});
 
 			}
-
+			
 			//logout
 		,	logout: function ( e ) {
 
