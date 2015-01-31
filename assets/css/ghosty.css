@@ -815,7 +815,7 @@ nav .menu > .uk-button-dropdown {
   bottom: none;
   left: 50px;
   margin: auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 50px);
   height: auto;
   background: none;
   -webkit-box-sizing: border-box;
@@ -824,7 +824,20 @@ nav .menu > .uk-button-dropdown {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  padding: 0 20px 10px;
+  margin: 0;
+  padding: 10px 20px;
+}
+.profile-content .common-profile-area .profile-block {
+  border: 1px solid #ccd1d9;
+  background: #f5f7fa;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px;
 }
 .profile-content .site-footer {
   position: fixed;
