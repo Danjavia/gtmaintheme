@@ -1,75 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{!< default}}
 
-	<title>Log in to MyApp</title>
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
 
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="https://app.userapp.io/css/demo/tutorial.css">
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        <a class="hidden user-registered" data-modal="#modal-user-registered"></a>
+    </nav>
+</header>
 
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="https://app.userapp.io/js/userapp.client.js"></script>
-	<script src="libs/cookies.min.js"></script>
-	<script src="common.js"></script>
-	<script>
-		// Function to show and hide the loader anim
-		function showLoader(show) {
-			document.getElementById("loader").style.display = (show ? "block" : "none");
-		}
+<main class="content" role="main">
 
-		// Login the user
-		function login() {
-			// Show the loader
-			showLoader(true);
+    <article class="{{post_class}}">
+    {{! Everything inside the #post tags pulls data from the post }}
 
-			// This will authenticate the user
-			UserApp.User.login({
-				login: document.getElementById("username").value,
-				password: document.getElementById("password").value
-			}, function(error, result) {
-				if (error) {
-					// Wrong password maybe?
-					alert("Error: " + error.message);
-					showLoader(false);
-				} else {
-					onLoginSuccessful();
-				}
-			});
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
 
-			return false;
-		}
+        <section class="post-content">
+            {{content}}
+        </section>
 
-		// When the user has been logged in successfully
-		function onLoginSuccessful() {
-			// Now, save the token in a cookie
-			Cookies.set("ua_session_token", UserApp.global.token);
-			
-			// Redirect the user to the index page
-			window.location.href = "/start";
-			showLoader(false);
-		}
-	</script>
-</head>
-<body>
-	<div class="container" style="text-align: center;">
-		<form class="form" onsubmit="return login()">
-			<h2 class="form-heading">Log in to MyApp</h2>
-			<div class="form-fields">
-				<input id="username" type="text" class="form-control" placeholder="Username" required autofocus>
-				<input id="password" type="password" class="form-control" placeholder="Password" required>
-			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-			<img id="loader" src="img/ajax-loader.gif" style="display: none; margin: 30px auto;">
-		</form>
-		
-		<a href="signup.html">Sign up</a>
-	</div> 
-</body>
-</html>
+    </article>
+
+    {{!-- Footer --}}
+    {{> "footer"}} 
+
+</main>
+{{/post}}
