@@ -771,9 +771,56 @@ nav .menu > .uk-button-dropdown {
   bottom: none;
   left: 0;
   margin: auto;
-  width: 80px;
+  width: 50px;
   height: 100%;
   background: #434a54;
+}
+.profile-options-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.profile-options-wrapper ul li {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 10px 5px;
+  text-align: center;
+}
+.profile-options-wrapper ul li:hover,
+.profile-options-wrapper ul li:active {
+  background: #ed5565;
+  cursor: pointer;
+}
+.profile-options-wrapper ul li a i {
+  font-size: 2em;
+}
+.profile-options-wrapper ul li a i:hover,
+.profile-options-wrapper ul li a i:active {
+  color: #f5f7fa;
+}
+.profile-content {
+  position: relative;
+  top: none;
+  right: none;
+  bottom: none;
+  left: 50px;
+  margin: auto;
+  width: calc(100% - 100px);
+  height: auto;
+  background: none;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 0 20px 10px;
 }
 .profile-content .site-footer {
   position: fixed;
@@ -782,7 +829,7 @@ nav .menu > .uk-button-dropdown {
   bottom: 0;
   left: none;
   margin: auto;
-  width: calc(100% - 80px);
+  width: calc(100% - 50px);
   height: auto;
   background: none;
 }
