@@ -804,6 +804,10 @@ nav .menu > .uk-button-dropdown {
 .profile-options-wrapper ul li a i:active {
   color: #f5f7fa;
 }
+.profile-options-wrapper ul li.logout {
+  position: absolute;
+  bottom: 0;
+}
 .profile-content {
   position: relative;
   top: none;
