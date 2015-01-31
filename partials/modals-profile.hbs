@@ -1,0 +1,23 @@
+{{!-- Plans --}}
+<div id="modal-plans" class="modal">
+	<div class="modal-dialog">
+		<a class="modal-close uk-close"></a>
+		<div class="modal-header">
+			Become premium
+		</div>
+		<div class="modal-content">
+			<span class="plan-description">Get all themes and weekly updates for a lifetime... and contact support 24/7 of course.</span>
+			<div class="plans-table">
+				<div class="monthly">
+					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7APH7S3PSB34L" class="ghost-btn ghost-btn-large ghost-btn-green gt-pay-btn" data-modal="#modal-user-register">$25 USD / Month</a>
+				</div>
+				<div class="yearly">
+					<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=48QAFMVN7536W" class="ghost-btn ghost-btn-large ghost-btn-green gt-pay-btn" data-modal="#modal-user-register">$250 USD / Year</a>					
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="{{ @blog.url }}">{{ @blog.title }}</a> &copy; {{ date format="YYYY" }}
+		</div>
+	</div>
+</div>
