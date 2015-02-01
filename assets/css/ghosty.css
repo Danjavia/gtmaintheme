@@ -792,7 +792,7 @@ nav .menu > .uk-button-dropdown {
   bottom: none;
   left: 0;
   margin: auto;
-  width: 50px;
+  width: 40px;
   height: 100%;
   background: #434a54;
   border-right: 3px solid #ed5565;
@@ -838,9 +838,9 @@ nav .menu > .uk-button-dropdown {
   top: none;
   right: none;
   bottom: none;
-  left: 50px;
+  left: 40px;
   margin: auto;
-  width: calc(100% - 50px);
+  width: calc(100% - 40px);
   height: auto;
   background: none;
   -webkit-box-sizing: border-box;
