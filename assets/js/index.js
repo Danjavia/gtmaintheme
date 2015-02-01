@@ -47,7 +47,7 @@
 					  		
 					  	else 
 					  		dwnsRef.child( ref ).update({
-						  			downloads: 2
+						  			downloads: 0
 						  		,	dwnLink: dwn
 						  		,	title: ref
 						  		,	img: $( '.single-image' ).attr( 'src' )
