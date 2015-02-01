@@ -394,7 +394,7 @@
 
 				var target = e.currentTarget;
 
-				$( '.fx-wrap' ).addClass( 'growed' );
+				$( target ).find( '.fx-wrap' ).addClass( 'growed' );
 			}
 
 			// Fx types
@@ -404,7 +404,7 @@
 
 				var target = e.currentTarget;
 
-				$( '.fx-wrap' ).removeClass( 'growed' );
+				$( target ).removeClass( 'growed' );
 			}
 
 	});
