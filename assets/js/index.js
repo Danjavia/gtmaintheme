@@ -43,7 +43,10 @@
 					  		
 					  	else 
 					  		dwnsRef.child( ref ).update({
-						  		downloads: 2
+						  			downloads: 2
+						  		,	dwnLink: ''
+						  		,	title: ''
+						  		,	url: ''
 							});
 					  	
 					});
