@@ -795,6 +795,7 @@ nav .menu > .uk-button-dropdown {
   width: 50px;
   height: 100%;
   background: #434a54;
+  border-right: 3px solid #ed5565;
 }
 .profile-options-wrapper ul {
   padding: 0;
@@ -862,6 +863,7 @@ nav .menu > .uk-button-dropdown {
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  display: none;
 }
 .profile-content .common-profile-area.active {
   -webkit-transform: scale(1);
@@ -874,6 +876,7 @@ nav .menu > .uk-button-dropdown {
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  display: block;
 }
 .profile-content .common-profile-area .profile-block {
   padding: 10px;
