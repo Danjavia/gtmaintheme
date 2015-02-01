@@ -77,7 +77,7 @@
 	            ,	'click [data-dwnlink]' : 'getFile'
 
 	            // Fx
-	            ,	'mouseover .individual-item .item-content img' : 'initScale'
+	            ,	'click .individual-item .item-content img' : 'initScale'
 	            ,	'mouseleave .individual-item .item-content .fx-wrap' : 'finishScale'
 	        }
 
