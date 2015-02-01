@@ -8,18 +8,23 @@
 
 <nav class="profile-options-wrapper">
 	<ul>
-		<li title="Profile settings"><a href=""><i class="uk-icon-user"></i></a></li>
-        <li title="Download Themes & apps" class="active"><a href=""><i class="uk-icon-paw"></i></a></li>
-        <li title="Create my own theme"><a href=""><i class="uk-icon-code"></i></a></li>
-        <li title="My bills"><a href=""><i class="uk-icon-money"></i></a></li>
-		<li title="Sign out" class="logout"><a href=""><i class="uk-icon-sign-out"></i></a></li>
+		<li class="menu-btn" data-tab=".user-settings-area" title="Profile settings"><a href=""><i class="uk-icon-user"></i></a></li>
+        <li class="menu-btn active" data-tab=".downloads-area" title="Download Themes & apps"><a href=""><i class="uk-icon-paw"></i></a></li>
+        <li class="menu-btn" data-tab="" title="Create my own theme"><a href=""><i class="uk-icon-code"></i></a></li>
+        <li class="menu-btn" data-tab=".bills-area" title="My bills"><a href=""><i class="uk-icon-money"></i></a></li>
+		<li class="logout" title="Sign out"><a href=""><i class="uk-icon-sign-out"></i></a></li>
 	</ul>
 </nav>
 
 <main class="profile-content" role="main">
 
+    {{!-- Settings area --}}
     <section class="common-profile-area user-setting-area"></section>
+
+    {{!-- Invoices area --}}
     <section class="common-profile-area bills-area"></section>
+
+    {{!-- Downaloads area --}}
     <section class="common-profile-area downloads-area active">
         <section class="profile-block themes-apps">
             <h2>Themes</h2>

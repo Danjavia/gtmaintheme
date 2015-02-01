@@ -76,6 +76,9 @@
 	            , 	'click .update': 'createUser'
 	            ,	'click [data-dwnlink]' : 'getFile'
 
+	            // Profile menu
+	            ,	'click .menu-btn': 'activeTab'
+
 	            // Fx
 	            // ,	'mouseover .individual-item .item-content img' : 'initScale'
 	            // ,	'mouseleave .individual-item .item-content .fx-wrap' : 'finishScale'
@@ -401,6 +404,20 @@
 				var target = e.currentTarget;
 
 				$( '.fx-wrap' ).removeClass( 'growed' );
+			}
+
+			// Profile menu
+		,	activeTab: function ( e ) {
+
+				e.preventDefault();
+
+				var target = e.currentTarget
+				,	activeTab = $( target ).attr( 'data-tab' );
+
+				$( '.menu-btn, .common-profile-area' ).removeClass( 'active' );
+
+				$( target ).addClass( 'active' );
+				$( activeTab ).addClass( 'active' );
 			}
 
 	});
