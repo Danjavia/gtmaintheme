@@ -356,7 +356,7 @@
 				                    + '<div class="fx-wrap">'
 					                    + '<h2 class="item-title">' + v.title + '</h2>'
 					                    + '<div class="btns">'
-						                    + '<a href="' + v.url + '" class="ghost-btn ghost-btn-large ghost-btn-white view-item">View</a>'
+						                    + '<a href="' + v.url + '" target="_blank" class="ghost-btn ghost-btn-large ghost-btn-white view-item">View</a>'
 						                    + '<a href="" data-dwnlink="' + v.dwnLink + '" class="ghost-btn ghost-btn-large ghost-btn-white dwn-item" download>Download</a>'
 					                    + '</div>'
 				                    + '</div>'
