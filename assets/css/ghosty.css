@@ -890,7 +890,27 @@ nav .menu > .uk-button-dropdown {
   /* Opera/IE 8+ */
 }
 .profile-content .common-profile-area .gt-themes .individual-item h2 {
-  margin: 0;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  font-size: 2em;
+  margin-top: 0;
+  color: #f5f7fa;
+  text-align: center;
+  text-transform: capitalize;
+}
+.profile-content .common-profile-area .gt-themes .individual-item a {
+  margin: 10px;
+}
+.profile-content .common-profile-area .gt-themes .individual-item a.view-item {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.profile-content .common-profile-area .gt-themes .individual-item a.dwn-item {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .profile-content .common-profile-area .gt-themes .individual-item .fx-wrap {
   position: absolute;
@@ -952,23 +972,12 @@ nav .menu > .uk-button-dropdown {
 }
 .profile-content .common-profile-area .gt-themes .individual-item .fx-wrap h2 {
   font-size: 2em;
-  margin-top: 20px;
+  margin: 0;
   color: #f5f7fa;
   text-align: center;
   text-transform: capitalize;
 }
-.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap .btns {
-  width: 100%;
-  margin-top: 40px;
-  text-align: center;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap .btns a {
+.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap a {
   margin: 10px;
 }
 .profile-content .site-footer {
