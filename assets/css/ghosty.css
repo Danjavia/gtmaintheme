@@ -1235,7 +1235,7 @@ nav .menu > .uk-button-dropdown {
   /* Opera/IE 8+ */
   padding: 20px 20px;
   font-family: 'Lato', sans-serif;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 .modal .modal-dialog .modal-footer {
   -webkit-box-sizing: border-box;
