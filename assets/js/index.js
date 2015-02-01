@@ -349,11 +349,11 @@
 
 		            $.each( items, function ( k, v ) {
 
-		            	var template = '<li data-url="' + v.url + '">'
+		            	var template = '<li data-url="' + v.url + '" class="uk-width-1-5">'
 			                    + '<img src="' + v.img + '" alt="">'
 			                    + '<h2 class="item-title">' + v.title + '</h2>'
 			                    + '<a href="' + v.url + '" class="ghost-btn view-item">View</a>'
-			                    + '<a href="' + v.dwnLink + '" class="ghost-btn dwn-item">Download</a>'
+			                    + '<a href="' + v.dwnLink + '" class="ghost-btn dwn-item" download>Download</a>'
 			                + '</li>';
 
 		            	$( '.gt-themes' ).append( template );
