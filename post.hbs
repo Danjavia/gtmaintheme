@@ -9,13 +9,13 @@
 {{! The big featured header }}
 <header class="main-header post-header {{#if image}}cover{{/if}}">
     {{#if image}}
-        <img data-aload="{{image}}" alt="">
+        <img class="single-image" data-absolute="{{ url }}" data-aload="{{image}}" alt="">
         <div class="blurred"></div>
     {{/if}}
 
     {{!-- Main cover --}}
     <div class="center-content">
-        <h2 class="page-description">{{ title }}</h2>
+        <h2 class="page-description single">{{ title }}</h2>
         {{#has tag="free"}}<h3 class="post-type">Free Theme{{/has}}
         {{#has tag="premium"}}<h3 class="post-type">Premium Theme{{/has}}
     </div>

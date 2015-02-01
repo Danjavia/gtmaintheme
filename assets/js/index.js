@@ -35,7 +35,8 @@
 					myFirebaseRef.child( 'downloads/' + $( '.free' ).attr( 'data-name' ) + '/downloads' ).on( "value", function( snapshot ) {
 					  	var value = snapshot.val()
 					  	,	dwnsRef = myFirebaseRef.child( "downloads" )
-					  	,	ref = $( '.free' ).attr( 'data-name' );
+					  	,	ref = $( '.free' ).attr( 'data-name' )
+					  	,	dwn = $( '.free' ).attr( 'data-dwn' );
 
 					  	if ( value != null ) 
 					  		$( '.times' ).html( value + ' Times' )
@@ -44,9 +45,10 @@
 					  	else 
 					  		dwnsRef.child( ref ).update({
 						  			downloads: 2
-						  		,	dwnLink: ''
-						  		,	title: ''
-						  		,	url: ''
+						  		,	dwnLink: '/public/gt-virtual-items/themes/free/' + dwn
+						  		,	title: $( '.page-description.single' ).text()
+						  		,	img: $( '.single-image' ).attr( 'src' )
+						  		,	url: $( '.single-image' ).attr( 'data-absolute' )
 							});
 					  	
 					});
