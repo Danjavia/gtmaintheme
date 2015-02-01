@@ -30,6 +30,24 @@
   color: #a0d468;
   border: 1px solid #a0d468;
 }
+.ghost-btn.ghost-btn-red {
+  color: #da4453;
+  border: 1px solid #da4453;
+}
+.ghost-btn.ghost-btn-red:hover,
+.ghost-btn.ghost-btn-red:active {
+  color: #ed5565;
+  border: 1px solid #ed5565;
+}
+.ghost-btn.ghost-btn-white {
+  color: #f5f7fa;
+  border: 1px solid #f5f7fa;
+}
+.ghost-btn.ghost-btn-white:hover,
+.ghost-btn.ghost-btn-white:active {
+  color: #ed5565;
+  background: #f5f7fa;
+}
 /* theme: Almost Flat */
 /* theme: Almost Flat */
 /* Fonts */
@@ -838,6 +856,62 @@ nav .menu > .uk-button-dropdown {
   box-sizing: border-box;
   /* Opera/IE 8+ */
   padding: 10px;
+}
+.profile-content .common-profile-area .gt-themes .individual-item {
+  height: 150px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.profile-content .common-profile-area .gt-themes .individual-item .item-content {
+  position: relative;
+  min-height: 150px;
+}
+.profile-content .common-profile-area .gt-themes .individual-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 0;
+}
+.profile-content .common-profile-area .gt-themes .individual-item h2 {
+  margin: 0;
+}
+.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 150px;
+  background: #ed5565;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  padding: 5px 10px;
+  z-index: 1;
+}
+.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap h2 {
+  font-size: 2em;
+  color: #f5f7fa;
+  text-align: center;
+  text-transform: capitalize;
+}
+.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap .btns {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.profile-content .common-profile-area .gt-themes .individual-item .fx-wrap .btns a {
+  display: block;
+  margin-bottom: 10px;
 }
 .profile-content .site-footer {
   position: fixed;

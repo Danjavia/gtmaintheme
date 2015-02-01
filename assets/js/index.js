@@ -48,8 +48,8 @@
 					  	else 
 					  		dwnsRef.child( ref ).update({
 						  			downloads: 2
-						  		,	dwnLink: '/public/gt-virtual-items/themes/free/' + dwn
-						  		,	title: $( '.page-description.single' ).text()
+						  		,	dwnLink: dwn
+						  		,	title: ref
 						  		,	img: $( '.single-image' ).attr( 'src' )
 						  		,	url: $( '.single-image' ).attr( 'data-absolute' )
 							});
@@ -74,6 +74,7 @@
 	            ,	'click .register': 'register'
 	            ,	'click .gt-pay-btn': 'setPayment'
 	            , 	'click .update': 'createUser'
+	            ,	'click [data-dwnlink]' : 'getFile'
 	        }
 
 	        // Clean all params
@@ -349,11 +350,17 @@
 
 		            $.each( items, function ( k, v ) {
 
-		            	var template = '<li data-url="' + v.url + '" class="uk-width-1-5">'
-			                    + '<img src="' + v.img + '" alt="">'
-			                    + '<h2 class="item-title">' + v.title + '</h2>'
-			                    + '<a href="' + v.url + '" class="ghost-btn view-item">View</a>'
-			                    + '<a href="' + v.dwnLink + '" class="ghost-btn dwn-item" download>Download</a>'
+		            	var template = '<li data-url="' + v.url + '" class="uk-width-1-5 individual-item">'
+		            			+ '<div class="item-content">'
+				                    + '<img src="' + v.img + '" alt="">'
+				                    + '<div class="fx-wrap">'
+					                    + '<h2 class="item-title">' + v.title + '</h2>'
+					                    + '<div class="btns">'
+						                    + '<a href="' + v.url + '" class="ghost-btn ghost-btn-large ghost-btn-white view-item">View</a>'
+						                    + '<a href="" data-dwnlink="' + v.dwnLink + '" class="ghost-btn ghost-btn-large ghost-btn-white dwn-item" download>Download</a>'
+					                    + '</div>'
+				                    + '</div>'
+			                	+ '</div>'
 			                + '</li>';
 
 		            	$( '.gt-themes' ).append( template );
@@ -362,6 +369,18 @@
 					
 				});
 
+			}
+
+			// Get file
+		,	getFile: function ( e ) {
+
+				e.preventDefault();
+
+				var target = e.currentTarget
+				,	link = $( target ).attr( 'data-dwnlink' )
+
+				window.location = '/public/gt-virtual-items/themes/paid/' + link;
+				return;
 			}
 
 	});
