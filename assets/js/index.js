@@ -394,7 +394,7 @@
 
 				var target = e.currentTarget;
 
-				$( target ).find( '.fx-wrap' ).addClass( 'growed' );
+				$( target ).parent().find( '.fx-wrap' ).addClass( 'growed' );
 			}
 
 			// Fx types
