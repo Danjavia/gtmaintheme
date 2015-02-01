@@ -216,6 +216,9 @@ nav .blog-logo {
   /* Opera/IE 8+ */
   padding: 5px;
 }
+nav .blog-logo > i {
+  font-size: 2.3em;
+}
 nav .blog-logo img {
   object-fit: cover;
   width: 32px;
@@ -809,6 +812,9 @@ nav .menu > .uk-button-dropdown {
   /* Opera/IE 8+ */
   padding: 10px 5px;
   text-align: center;
+}
+.profile-options-wrapper ul li.active {
+  background: #ed5565;
 }
 .profile-options-wrapper ul li:hover,
 .profile-options-wrapper ul li:active {
