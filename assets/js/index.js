@@ -346,10 +346,21 @@
 				myFirebaseRef.child( 'downloads/' ).on( "value", function( snapshot ) {
 					
 					var items = snapshot.val();
-					console.log( items );
 
+		            $.each( items, function ( k, v ) {
+
+		            	var template = '<li data-url="' + v.url + '">'
+			                    + '<img src="' + v.img + '" alt="">'
+			                    + '<h2 class="item-title">' + v.title + '</h2>'
+			                    + '<a href="' + v.url + '" class="ghost-btn view-item">View</a>'
+			                    + '<a href="' + v.dwnLink + '" class="ghost-btn dwn-item">Download</a>'
+			                + '</li>';
+
+		            	$( '.gt-themes' ).append( template );
+			            
+		            });
+					
 				});
-
 
 			}
 
