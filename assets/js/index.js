@@ -24,6 +24,9 @@
 			    if ( this.checkPage( 'start' ) ) 
 			    	this.confirmSuscribe();
 
+			    if ( this.checkPage( 'profile' ) )
+			    	this.profileEvents();
+
 			    // Equalize items height
     			$( 'article.article' ).matchHeight();
 
@@ -335,6 +338,19 @@
 	    		,	parts = url.split( '/' );
 
 	    		return ( parts[ 3 ] == page ) ? true : false;
+			}
+
+			// Pages
+		,	profileEvents: function () {
+
+				myFirebaseRef.child( 'downloads/' ).on( "value", function( snapshot ) {
+					
+					var items = snapshot.val();
+					console.log( items );
+
+				});
+
+
 			}
 
 	});
