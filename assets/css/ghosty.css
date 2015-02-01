@@ -856,6 +856,7 @@ nav .menu > .uk-button-dropdown {
 }
 .profile-content .common-profile-area .profile-block > h2 {
   border: 1px solid #ccd1d9;
+  font-family: 'Lato', sans-serif;
   background: #f5f7fa;
   border-radius: 3px;
   -webkit-box-sizing: border-box;
@@ -864,7 +865,8 @@ nav .menu > .uk-button-dropdown {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  padding: 20px;
+  padding: 10px;
+  font-size: 2em;
 }
 .profile-content .common-profile-area .gt-themes .individual-item {
   height: 150px;
