@@ -846,6 +846,9 @@ nav .menu > .uk-button-dropdown {
   padding: 10px 20px;
 }
 .profile-content .common-profile-area .profile-block {
+  padding: 10px;
+}
+.profile-content .common-profile-area .profile-block > h2 {
   border: 1px solid #ccd1d9;
   background: #f5f7fa;
   border-radius: 3px;
@@ -855,7 +858,7 @@ nav .menu > .uk-button-dropdown {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  padding: 10px;
+  padding: 20px;
 }
 .profile-content .common-profile-area .gt-themes .individual-item {
   height: 150px;
@@ -876,6 +879,15 @@ nav .menu > .uk-button-dropdown {
   object-fit: cover;
   overflow: hidden;
   z-index: 0;
+  border: 1px solid #ccd1d9;
+  background: #f5f7fa;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
 }
 .profile-content .common-profile-area .gt-themes .individual-item h2 {
   margin: 0;
