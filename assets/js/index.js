@@ -75,6 +75,10 @@
 	            ,	'click .gt-pay-btn': 'setPayment'
 	            , 	'click .update': 'createUser'
 	            ,	'click [data-dwnlink]' : 'getFile'
+
+	            // Fx
+	            ,	'mouseover .individual-item .item-content img' : 'initScale'
+	            ,	'mouseleave .individual-item .item-content .fx-wrap' : 'finishScale'
 	        }
 
 	        // Clean all params
@@ -381,6 +385,26 @@
 
 				window.location = '/public/gt-virtual-items/themes/paid/' + link;
 				return;
+			}
+
+			// Fx types
+		,	initScale: function ( e ) {
+
+				e.preventDefault();
+
+				var target = e.currentTarget;
+
+				$( '.fx-wrap' ).addClass( 'growed' );
+			}
+
+			// Fx types
+		,	finishScale: function ( e ) {
+
+				e.preventDefault();
+
+				var target = e.currentTarget;
+
+				$( '.fx-wrap' ).removeClass( 'growed' );
 			}
 
 	});
