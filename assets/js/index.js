@@ -77,7 +77,7 @@
 	            ,	'click [data-dwnlink]' : 'getFile'
 
 	            // Fx
-	            ,	'click .individual-item .item-content img' : 'initScale'
+	            ,	'mouseover .individual-item .item-content img' : 'initScale'
 	            ,	'mouseleave .individual-item .item-content .fx-wrap' : 'finishScale'
 	        }
 
@@ -360,8 +360,8 @@
 				                    + '<div class="fx-wrap">'
 					                    + '<h2 class="item-title">' + v.title + '</h2>'
 					                    + '<div class="btns">'
-						                    + '<a href="' + v.url + '" target="_blank" class="ghost-btn ghost-btn-large ghost-btn-white view-item">View</a>'
-						                    + '<a href="" data-dwnlink="' + v.dwnLink + '" class="ghost-btn ghost-btn-large ghost-btn-white dwn-item" download>Download</a>'
+						                    + '<a href="' + v.url + '" target="_blank" class="ghost-btn ghost-btn-large ghost-btn-white view-item"><i class="uk-icon-search"></i></a>'
+						                    + '<a href="" data-dwnlink="' + v.dwnLink + '" class="ghost-btn ghost-btn-large ghost-btn-white dwn-item" download><i class="uk-icon-download"></i></a>'
 					                    + '</div>'
 				                    + '</div>'
 			                	+ '</div>'
@@ -404,7 +404,7 @@
 
 				var target = e.currentTarget;
 
-				$( target ).removeClass( 'growed' );
+				$( '.fx-wrap' ).removeClass( 'growed' );
 			}
 
 	});
