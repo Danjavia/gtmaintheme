@@ -279,8 +279,22 @@
 	    				window.location = '/';
 	    				return;
 					} else {
+						// Login user
+						UserApp.User.login({ "login": email, "password": password }, function( error, result ) {
+						    if ( error ) {
 
-						window.location = '/profile';	
+						    	console.log( 'err' )
+						        // Something went wrong...
+						        // Check error.name. Might just be a wrong password?
+						    } else if ( result.locks && result.locks.length > 0 ) {
+						    	console.log( 'locked' )
+						        // This user is locked
+						    } else {
+						        // User is logged in, save result.token in a cookie called 'ua_session_token'
+						        Cookies.set( 'ua_session_token', result.token );
+						        window.location = '/profile';
+						    }
+						});
 					}
 
 				});
