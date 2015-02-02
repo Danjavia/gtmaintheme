@@ -232,10 +232,10 @@
 				,	suscriberEmail = localStorage.refererMail
 				,	temporalPassword = md5( suscriberEmail );
 
-				$( '.gt-email-suscribed' ).val( suscriberEmail );
 
 				setTimeout( function () {
 
+					$( '.gt-email-suscribed' ).val( suscriberEmail );
 					$( '.user-registered' ).click();
 
 					delete localStorage.payLink
