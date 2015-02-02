@@ -353,6 +353,7 @@
 				    // No, redirect the user to the login page
 				    // window.location.href = "login.html";
 				    console.log( 'not token' );
+				    window.location = '/';
 				}
 			}
 
