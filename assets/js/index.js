@@ -252,14 +252,14 @@
 
 				var target = e.currentTarget
 				,	email = $( '.gt-email-suscribed' ).val()
-				,	password = $( '.gt-password-suscribed' ).val()
+				,	password = md5( $( '.gt-password-suscribed' ).val() )
 				,	temporalPassword = md5( email )
 				,	suscriptionType = this.getURLParameter( 'type' );
 
 				UserApp.User.save({
 				    "email": email,
 				    "login": email,
-				    "password": temporalPassword,
+				    "password": ( password.length > 4 ) ? password : temporalPassword,
 				    // "properties": {
 				    //     "age": {
 				    //         "value": 24,
@@ -318,6 +318,7 @@
 		, 	checkUserSession: function () {
 
 				var token = Cookies.get( "ua_session_token" );
+
 				if ( token ) {
 				    // Yes, there is
 				    UserApp.setToken( token );
@@ -350,6 +351,9 @@
 
 			// Pages
 		,	profileEvents: function () {
+
+				// Check the user session
+				this.checkUserSession();
 
 				myFirebaseRef.child( 'downloads/' ).on( "value", function( snapshot ) {
 					
