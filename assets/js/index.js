@@ -344,6 +344,7 @@
 				            // window.location.href = "login.html";
 				    		console.log( error );
 				    		window.location = '/';
+				    		return;
 				        } else {
 				            // Success, the profile is at user[0]
 				            console.log( user[ 0 ] );
@@ -353,6 +354,7 @@
 				    // No, redirect the user to the login page
 				    console.log( 'not token' );
 				    window.location = '/';
+				    return;
 				}
 			}
 
