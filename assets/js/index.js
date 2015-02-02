@@ -170,7 +170,7 @@
 				e.preventDefault();
 
 				var username = $( '.gt-username' ).val() //timothy
-				,	password = $( '.gt-password' ).val() //"v3rYsecre7!"
+				,	password = md5( $( '.gt-password' ).val() ) //"v3rYsecre7!"
 
 				// Login user
 				UserApp.User.login({ "login": username, "password": password }, function( error, result ) {
