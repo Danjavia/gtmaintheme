@@ -184,8 +184,8 @@
 				        // This user is locked
 				    } else {
 				        // User is logged in, save result.token in a cookie called 'ua_session_token'
-				    	console.log( 'cool' )
 				        Cookies.set( 'ua_session_token', result.token );
+				        window.location = '/profile';
 				    }
 				});
 
@@ -329,6 +329,7 @@
 				            // The token has probably expired, go to the login page
 				            // window.location.href = "login.html";
 				    		console.log( error );
+				    		window.location = '/';
 				        } else {
 				            // Success, the profile is at user[0]
 				            console.log( user[ 0 ] );
