@@ -311,7 +311,7 @@
 					Cookies.expire( 'ua_session_token' );
 
 					if ( typeof ( Cookies.get( 'ua_session_token' ) ) == 'undefined' )
-						console.log( 'logged out' );
+						window.location = '/';
 				});
 			}
 
