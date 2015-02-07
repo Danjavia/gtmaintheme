@@ -7,4 +7,5 @@
 //@prepros-append jquery.fitvids.js
 //@prepros-append cookies.min.js"
 //@prepros-append jquery.matchHeight.js
+//@prepros-append paypal-button.min.js
 //@prepros-append index.js
