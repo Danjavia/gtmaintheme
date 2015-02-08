@@ -92,8 +92,9 @@
 
 	    		if ( parts[ 3 ] != 'start' ) {
 
-	    			delete localStorage.payLink
-	    			delete localStorage.refererMail;
+	    			delete localStorage.payLink // Link to payment form
+	    			delete localStorage.refererMail; // Email suscriber
+	    			delete localStorage.ps; // Plan Suscribe
 	    		}
 	    	
 	    	}
@@ -195,9 +196,12 @@
 		,	setPayment: function ( e ) {
 
 				var target = e.currentTarget
-				,	payUrl = $( target ).attr( 'href' );
+				,	payUrl = $( target ).attr( 'href' )
+				,	plan = $( target ).attr( 'data-ps' );
 
-				$( '.register' ).attr( 'data-link', payUrl );
+				$( '.register' )
+					.attr( 'data-link', payUrl )
+					.attr( 'data-plan', plan );
 			}
 
 			// Create user
@@ -208,10 +212,12 @@
 				var target = e.currentTarget
 				,	email = $( '.gt-email' ).val()
 				,	payUrl = $( target ).attr( 'data-link' )
+				,	plan = $( target ).attr( 'data-plan' )
 
 				if ( email.length > 5 ) {
 
 					localStorage.refererMail = email; 
+					localStorage.ps = plan; 
 					
 					window.location = payUrl;
 				}
@@ -254,7 +260,9 @@
 				,	email = $( '.gt-email-suscribed' ).val()
 				,	password = md5( $( '.gt-password-suscribed' ).val() )
 				,	temporalPassword = md5( email )
-				,	suscriptionType = this.getURLParameter( 'type' );
+				,	suscriptionType = localStorage.ps;
+
+				delete localStorage.ps;
 
 				UserApp.User.save({
 				    "email": email,
