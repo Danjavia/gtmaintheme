@@ -461,7 +461,7 @@
 
 				if ( this.getURLParameter( 'file' ) ) {
 
-					window.location = '/public/gt-virtual-items/themes/paid/' + file;
+					window.location = '/public/gt-virtual-items/themes/paid/' + file + '.zip';
 					return;
 				}
 			}
