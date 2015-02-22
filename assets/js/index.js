@@ -27,6 +27,9 @@
 			    if ( this.checkPage( 'profile' ) )
 			    	this.profileEvents();
 
+			    if ( this.checkPage( 'purchase' ) )
+			    	this.purchaseItem();
+
 			    // Equalize items height
     			$( 'article.article' ).matchHeight();
 
@@ -447,6 +450,20 @@
 
 				$( target ).addClass( 'active' );
 				$( activeTab ).addClass( 'active' );
+			}
+
+			// Purchase item
+		,	purchaseItem: function ( e ) {
+
+				e.preventDefault();
+
+				var file = this.getURLParameter( 'file' );
+
+				if ( this.getURLParameter( 'file' ) ) {
+
+					window.location = '/public/gt-virtual-items/themes/paid/' + file;
+					return;
+				}
 			}
 
 	});
