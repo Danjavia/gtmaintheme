@@ -453,9 +453,9 @@
 			}
 
 			// Purchase item
-		,	purchaseItem: function ( e ) {
+		,	purchaseItem: function () {
 
-				e.preventDefault();
+				// e.preventDefault();
 
 				var file = this.getURLParameter( 'file' );
 
